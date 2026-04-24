@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complivolt Mobile Battery Services | 24/7 Perth</title>
+<meta name="description" content="24/7 mobile car battery replacement in Perth WA. Fast response, professional testing, same-day replacement. We come to you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --dark: #111111;
+    --card: #161616;
+    --green: #39ff14;
+    --green-dim: #2bc910;
+    --green-glow: rgba(57,255,20,0.18);
+    --white: #f5f5f5;
+    --grey: #888;
+    --border: rgba(57,255,20,0.15);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* STICKY NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--green); }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-call {
+    background: var(--green);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .btn-call:hover {
+    background: #fff;
+    box-shadow: 0 0 24px var(--green-glow);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--green);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 9px 18px;
+    border: 1.5px solid var(--green);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover {
+    background: var(--green-glow);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 24px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 40%, rgba(57,255,20,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(57,255,20,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(57,255,20,0.08);
+    border: 1px solid var(--border);
+    color: var(--green);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    margin-bottom: 24px;
+    width: fit-content;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-tag::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,100% { opacity:1; transform:scale(1); }
+    50% { opacity:0.4; transform:scale(0.7); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(20px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    line-height: 1.0;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--green);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 520px;
+    margin-bottom: 36px;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.7s 0.3s ease both;
+    margin-bottom: 48px;
+  }
+
+  .hero-btns .btn-call { font-size: 1.05rem; padding: 14px 28px; }
+  .hero-btns .btn-outline { font-size: 1.05rem; padding: 13px 26px; }
+
+  .trust-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.7s 0.4s ease both;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #bbb;
+  }
+
+  .trust-item .icon {
+    width: 28px; height: 28px;
+    background: rgba(57,255,20,0.1);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  /* SECTIONS */
+  section { padding: 72px 24px; }
+
+  .section-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  h2 span { color: var(--green); }
+
+  .section-intro {
+    color: #999;
+    max-width: 480px;
+    margin-bottom: 48px;
+    font-size: 0.97rem;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--green);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .service-card:hover {
+    border-color: rgba(57,255,20,0.4);
+    transform: translateX(4px);
+  }
+
+  .service-card:hover::before { opacity: 1; }
+
+  .service-icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .service-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    color: #999;
+  }
+
+  /* HOW IT WORKS */
+  .steps-bg { background: var(--dark); }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    left: 21px; top: 40px; bottom: 40px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--green), transparent);
+  }
+
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    width: 44px; height: 44px;
+    background: var(--green);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-content h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+
+  .step-content p { font-size: 0.9rem; color: #999; }
+
+  /* PRICING */
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .price-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 24px;
+  }
+
+  .price-card.featured {
+    border-color: var(--green);
+    position: relative;
+  }
+
+  .price-card.featured::after {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: -1px; right: 20px;
+    background: var(--green);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    color: var(--grey);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  .price-amount {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 2.4rem;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .price-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .price-card p { font-size: 0.88rem; color: #aaa; }
+
+  .price-badge {
+    display: inline-block;
+    background: rgba(57,255,20,0.1);
+    color: var(--green);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    margin-top: 12px;
+    border: 1px solid var(--border);
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-bg { background: var(--dark); }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .review-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 24px;
+  }
+
+  .stars {
+    color: var(--green);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .review-text {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 16px;
+    line-height: 1.65;
+  }
+
+  .reviewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .reviewer-avatar {
+    width: 36px; height: 36px;
+    background: rgba(57,255,20,0.15);
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--green);
+  }
+
+  .reviewer-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .reviewer-loc {
+    font-size: 0.78rem;
+    color: var(--grey);
+  }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: 0; }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  .faq-q {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-q::after {
+    content: '+';
+    color: var(--green);
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: transform 0.2s;
+  }
+
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+  .faq-a {
+    font-size: 0.9rem;
+    color: #999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 200px;
+    padding-top: 12px;
+  }
+
+  /* EMERGENCY BANNER */
+  .emergency {
+    background: var(--green);
+    padding: 36px 24px;
+    text-align: center;
+  }
+
+  .emergency h2 {
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .emergency p {
+    color: rgba(0,0,0,0.65);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+
+  .emergency .btn-dark {
+    background: var(--black);
+    color: var(--green);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px;
+    transition: box-shadow 0.2s;
+  }
+
+  .emergency .btn-dark:hover {
+    box-shadow: 0 0 24px rgba(0,0,0,0.4);
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .contact-info { display: flex; flex-direction: column; gap: 16px; }
+
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-card-icon {
+    width: 44px; height: 44px;
+    background: rgba(57,255,20,0.1);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-card h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 4px;
+  }
+
+  .contact-card a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    font-size: 1.05rem;
+  }
+
+  .contact-card a:hover { color: var(--green); }
+
+  .contact-form {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 28px 24px;
+  }
+
+  .contact-form h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .form-group { margin-bottom: 16px; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--green);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .form-group select option { background: var(--dark); }
+
+  .form-submit {
+    width: 100%;
+    background: var(--green);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 4px;
+  }
+
+  .form-submit:hover { background: #fff; }
+
+  /* SERVICE AREAS */
+  .areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .area-tag {
+    background: rgba(57,255,20,0.06);
+    border: 1px solid var(--border);
+    color: #bbb;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    letter-spacing: 0.04em;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #050505;
+    border-top: 1px solid var(--border);
+    padding: 36px 24px 24px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  .footer-logo span { color: var(--green); }
+
+  .footer-tagline {
+    font-size: 0.85rem;
+    color: var(--grey);
+    margin-bottom: 24px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--green); }
+
+  .footer-bottom {
+    font-size: 0.78rem;
+    color: #555;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 20px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 48px; height: 3px;
+    background: var(--green);
+    margin: 0 0 32px;
+  }
+
+  /* WHATSAPP FLOAT */
+  .wa-float {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    width: 54px; height: 54px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    z-index: 99;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeUp 1s 0.6s ease both;
+  }
+
+  .wa-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.6);
+  }
+
+  /* DESKTOP */
+  @media (min-width: 640px) {
+    nav { padding: 0 48px; }
+    section { padding: 88px 48px; }
+    .hero { padding: 120px 48px 80px; }
+
+    .services-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .emergency { padding: 56px 48px; }
+    footer { padding: 48px 48px 28px; }
+  }
+
+  @media (min-width: 1024px) {
+    nav { padding: 0 80px; }
+    section { padding: 96px 80px; }
+    .hero { padding: 140px 80px 96px; }
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .pricing-cards { grid-template-columns: repeat(4, 1fr); }
+    .reviews { grid-template-columns: repeat(3, 1fr); }
+    .emergency { padding: 72px 80px; }
+    footer { padding: 56px 80px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">COMPLI<span>VOLT</span></a>
+  <div class="nav-cta">
+    <a href="tel:0405072061" class="btn-call">⚡ Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-tag">Available 24/7 · Perth, WA</div>
+  <h1>Mobile Car Battery<br><em>We Come To You</em></h1>
+  <p class="hero-sub">Flat battery? Dead car? Don't wait. We come to your home, office, or roadside with fast professional battery testing and same-day replacement.</p>
+  <div class="hero-btns">
+    <a href="tel:0405072061" class="btn-call">⚡ Call Now — 0405 072 061</a>
+    <a href="#contact" class="btn-outline">📩 Get Help Now</a>
+  </div>
+  <div class="trust-row">
+    <div class="trust-item"><div class="icon">✅</div> 1-Year Battery Warranty</div>
+    <div class="trust-item"><div class="icon">📋</div> Full Health Report</div>
+    <div class="trust-item"><div class="icon">⚡</div> Fast Response Time</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-tag">What We Do</div>
+  <h2>Our <span>Services</span></h2>
+  <div class="divider"></div>
+  <p class="section-intro">From emergency jump-starts to full battery replacements — we bring the workshop to you, anywhere in Perth.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🔋</div>
+      <h3>Mobile Battery Replacement</h3>
+      <p>On-site battery swap for all makes and models. We source the right battery and fit it while you wait.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Battery Health Testing & Report</h3>
+      <p>Professional diagnostic testing with a written health report. Know exactly what's happening with your battery.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <h3>Jump Start Assistance</h3>
+      <p>Stuck with a flat battery? We'll get you running fast — wherever you are in Perth.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔌</div>
+      <h3>Alternator & Charging System Test</h3>
+      <p>Battery keeps dying? We test the full charging system to find the real cause before you spend money on parts.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚨</div>
+      <h3>24/7 Emergency Battery Service</h3>
+      <p>Broke down at night or on a weekend? We operate around the clock so you're never left stranded.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚓</div>
+      <h3>Generator, Boat & Deep Cycle</h3>
+      <p>Not just cars — we replace batteries for boats, generators, caravans, and heavy equipment too.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps-bg" id="how">
+  <div class="section-tag">Simple Process</div>
+  <h2>How It <span>Works</span></h2>
+  <div class="divider"></div>
+  <p class="section-intro">Three easy steps from flat battery to back on the road.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Call or Message Us</h3>
+        <p>Tell us your location and situation. Available 24/7 on call, text, or WhatsApp. We'll give you an immediate response.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>We Come To You</h3>
+        <p>Our technician arrives at your home, workplace, or roadside location with full testing equipment and a stock of batteries.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Test & Replace</h3>
+        <p>We run a full battery health test, show you the results, replace the battery on the spot, and hand you your warranty documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-tag">Transparent Pricing</div>
+  <h2>Simple <span>Pricing</span></h2>
+  <div class="divider"></div>
+  <p class="section-intro">No hidden fees. No surprises. You know the cost before we start.</p>
+  <div class="pricing-cards">
+    <div class="price-card">
+      <div class="price-label">Call-Out Fee</div>
+      <div class="price-amount">$50+</div>
+      <h3>Site Visit</h3>
+      <p>Distance-based call-out across Perth metro and surrounds.</p>
+    </div>
+    <div class="price-card featured">
+      <div class="price-label">Battery Replacement</div>
+      <div class="price-amount">Cost +</div>
+      <h3>Full Install</h3>
+      <p>Battery cost plus professional installation. Free battery test included with every replacement.</p>
+      <div class="price-badge">✅ Free test included</div>
+    </div>
+    <div class="price-card">
+      <div class="price-label">Jump Start</div>
+      <div class="price-amount">$60+</div>
+      <h3>Get Moving</h3>
+      <p>Fast jump start service to get you back on the road quickly.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-label">After Hours</div>
+      <div class="price-amount">+Fee</div>
+      <h3>Night / Weekend</h3>
+      <p>Additional after-hours charges apply for late-night and public holiday call-outs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-bg" id="reviews">
+  <div class="section-tag">Customer Reviews</div>
+  <h2>What Perth <span>Says</span></h2>
+  <div class="divider"></div>
+  <div class="reviews">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Battery died in a Karrinyup car park at 9pm. Called Complivolt and they were there within 40 minutes. Replaced my battery on the spot and I was home by 10. Absolute lifesavers."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">SL</div>
+        <div>
+          <div class="reviewer-name">Sarah L.</div>
+          <div class="reviewer-loc">Karrinyup, Perth</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Super professional. They tested my battery, showed me exactly what the report said, and didn't try to upsell me on anything I didn't need. Honest and fast."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">MB</div>
+        <div>
+          <div class="reviewer-name">Mark B.</div>
+          <div class="reviewer-loc">Joondalup, Perth</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Used them for our work fleet of 6 vans. They came to our depot, tested everything, and replaced two batteries in one visit. Saved us so much downtime. Will use again."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">TP</div>
+        <div>
+          <div class="reviewer-name">Tom P.</div>
+          <div class="reviewer-loc">Osborne Park, Perth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-tag">Questions</div>
+  <h2>FAQs</h2>
+  <div class="divider"></div>
+  <div class="faq-list">
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">How long does it take?</div>
+      <div class="faq-a">Most jobs take 30–60 minutes from when we arrive on site. Response time varies but we aim to be with you within 60 minutes of your call in the Perth metro area.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Do you offer a warranty?</div>
+      <div class="faq-a">Yes — all battery replacements come with a 1-year warranty. We'll provide you with written documentation on the day.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Do you service all vehicles?</div>
+      <div class="faq-a">We service cars, SUVs, utes, vans, trucks, boats, generators, caravans, and deep cycle systems. If you're unsure, just call us.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Are you really available 24/7?</div>
+      <div class="faq-a">Yes. We operate around the clock, 365 days a year, including public holidays. After-hours rates apply for late-night and weekend call-outs.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Do you cover all of Perth?</div>
+      <div class="faq-a">We cover the full Perth metro area and many surrounding suburbs. Contact us with your location and we'll confirm availability.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY BANNER -->
+<div class="emergency">
+  <h2>Battery Dead Right Now?</h2>
+  <p>Don't wait. Call us and we'll be on our way fast — 24 hours a day, 7 days a week.</p>
+  <a href="tel:0405072061" class="btn-dark">📞 0405 072 061</a>
+  <a href="tel:0426655487" class="btn-dark">📞 0426 655 487</a>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-tag">Get In Touch</div>
+  <h2>Contact <span>Us</span></h2>
+  <div class="divider"></div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div>
+          <h4>Call or Text 24/7</h4>
+          <a href="tel:0405072061">0405 072 061</a>
+          <a href="tel:0426655487">0426 655 487</a>
+          <a href="tel:0405303558">0405 303 558</a>
+          <a href="tel:0449017115">0449 017 115</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">💬</div>
+        <div>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/61405072061">Message us on WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <div>
+          <h4>Service Area</h4>
+          <span style="font-size:0.9rem;color:#aaa;">Perth Metro & Surrounding Suburbs</span>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag" style="margin-bottom:10px;">Areas We Cover</div>
+        <div class="areas">
+          <span class="area-tag">CBD</span>
+          <span class="area-tag">Joondalup</span>
+          <span class="area-tag">Karrinyup</span>
+          <span class="area-tag">Stirling</span>
+          <span class="area-tag">Osborne Park</span>
+          <span class="area-tag">Fremantle</span>
+          <span class="area-tag">Cannington</span>
+          <span class="area-tag">Midland</span>
+          <span class="area-tag">Rockingham</span>
+          <span class="area-tag">Mandurah</span>
+          <span class="area-tag">Armadale</span>
+          <span class="area-tag">Subiaco</span>
+          <span class="area-tag">Nedlands</span>
+          <span class="area-tag">Victoria Park</span>
+          <span class="area-tag">+ More</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="e.g. John Smith">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="e.g. 04XX XXX XXX">
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Emergency Battery Replacement</option>
+          <option>Battery Health Test</option>
+          <option>Jump Start</option>
+          <option>Alternator / Charging System Test</option>
+          <option>Fleet Service</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Location / Message</label>
+        <textarea placeholder="Tell us your suburb and what's happening with your vehicle..."></textarea>
+      </div>
+      <button class="form-submit" onclick="alert('Thanks! We\'ll be in touch very soon. For emergencies, please call us directly.')">Send Message ⚡</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">COMPLI<span>VOLT</span></div>
+  <div class="footer-tagline">Mobile Battery Services · Perth, WA · Available 24/7</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Complivolt Mobile Battery Services · Perth, Western Australia · ABN: __ ___ ___ ___
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/61405072061" class="wa-float" target="_blank" title="WhatsApp Us">💬</a>
+
+</body>
+</html>
